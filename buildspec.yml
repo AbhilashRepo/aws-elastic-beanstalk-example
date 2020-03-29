@@ -2,15 +2,15 @@ version: 0.1
 phases:
    pre_build:
     commands:
-      - echo "Entered the pre-build phase"
+    - echo "Entered the pre-build phase"
   build:
     commands:
-      - echo "Entered build phase"
-      - mvn clean prepare-package war:explode
+    - echo "Entered build phase"
+    - mvn clean prepare-package war:explode
     post_build:
       commands:
-        - echo "Enter the post-build phase"
-        - mv traget/deploy ./
+      - echo "Enter the post-build phase"
+      - mv traget/deploy ./
 artifacts:
   files:
     -deploy/**/*
